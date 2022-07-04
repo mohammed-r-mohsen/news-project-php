@@ -1,0 +1,50 @@
+we have thre three pages wee do it 
+the first page 
+indesx : 
+the search bar and the subscribe operation 
+the search bar must delete from this page and add it in the include pages 
+
+
+the search bar operation : 
+search in news or search in description or search in vcategory category
+
+
+the second page : 
+contact page : 
+
+we do the email and the subscribe and delete the search bar from this page 
+edit the google mab to the local area in gaza not in usa 
+
+the thired page : 
+single page 
+
+the search bar herre just in the current page
+and do te subscribe operation 
+
+
+sould add the filter and the filter lie this 
+
+time  
+category 
+author : the admin is the author in this project 
+
+
+
+
+search +  social + subscribe + filter  
+
+
+
+
+
+in the database we use the siglton to make any action in db 
+
+when create the products use two design pattern 
+the factory or make the produect and the builder for make details
+
+singlton : db  
+factory  : category
+builder  : details
+
+
+
