@@ -32,11 +32,9 @@ class AdminDB
      {
         $AdminName=$admin->getname();
         $AdminEmail= $admin->getemail();
-
-         
-         
-        $AdminPassword = password_hash($admin->getpassword , PASSWORD_DEFAULT);
-        //$AdminPassword=$admin->getpassssword();
+        $Password=$admin->getpassssword();
+        $AdminPassword = password_hash($Password , PASSWORD_DEFAULT);
+        
         try {
              DataBase::getDBoperation()->connect();
             
@@ -107,10 +105,11 @@ class AdminDB
          $username = $admin->getName();
          $email = $admin->getemail();
          $password = $admin->getpassssword();
+         $AdminPassword = password_hash($password , PASSWORD_DEFAULT);
         try {
             DataBase::getDBoperation()->connect();
             $dbsql = 'USE '.DataBase::getDBoperation()->getdbName();
-            $sql = "UPDATE `admin` SET `username` ='$username', `email` = '$email', `password` = '$password' WHERE `admin`.`username` = '$adminName';";
+            $sql = "UPDATE `admin` SET `username` ='$username', `email` = '$email', `password` = '$AdminPassword' WHERE `admin`.`username` = '$adminName';";
             DataBase::getDBoperation()->GetConn()->exec($dbsql);
             DataBase::getDBoperation()->GetConn()->exec($sql);
             

@@ -207,7 +207,7 @@ if ($_SESSION["lastpage"] == "Home.php")
                                                                 <div class="form-group">
                                                                     <div class="input-group">
                                                                         <div class="input-group-addon"><i class="fa fa-asterisk"></i></div>
-                                                                        <input type="password" id="password" name="password" placeholder="<?php echo $admin['password'];?> " value="<?php echo $admin['password'];}?>" class="form-control">
+                                                                        <input type="text" id="password" name="password" placeholder="<?php echo $admin['password'];?> " value="<?php echo $admin['password'];}?>" class="form-control">
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-actions form-group"><button type="submit" name="AdminUpdate" class="btn btn-success btn-sm">Submit</button></div>
