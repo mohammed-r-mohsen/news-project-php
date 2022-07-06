@@ -197,7 +197,7 @@ if ($_SESSION["lastpage"] == "Home.php")
                                                                     ?>
 
                                             <div class='alert alert-danger'>
-                                               <strong>Danger!<?php echo $item;?></strong>
+                                               <strong>Danger!<?php if($item!=null)echo $item;?></strong>
                                             </div>
 
                                                 <?php
@@ -208,7 +208,8 @@ if ($_SESSION["lastpage"] == "Home.php")
 
                                                             }
                                                             
-                                                            }else
+
+                                                        }else
                                                             {
                                                                 ?>
 
@@ -224,10 +225,9 @@ if ($_SESSION["lastpage"] == "Home.php")
 
 
 
-                                                                    }
+                                              }
 
-
-                                                                }
+                                         }
 
 
 

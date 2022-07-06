@@ -37,6 +37,8 @@ class NewsDB
 
 
         try {
+
+            session_start();
              DataBase::getDBoperation()->connect();
             
             $dbsql='USE '.DataBase::getDBoperation()->getdbName();
@@ -45,7 +47,9 @@ class NewsDB
             DataBase::getDBoperation()->GetConn()->exec($dbsql);
             DataBase::getDBoperation()->GetConn()->exec($sql);
             
+            $_SESSION['addAdmin'] = 'success created the admin ';
              return header("Location:http://localhost/news-project/sufee-admin-dashboard-master/news-list.php");
+            
              DataBase::getDBoperation()->disconnect();
         } catch (PDOException $th) {
             return header("Location:http://localhost/news-project/sufee-admin-dashboard-master/add-News.php");
