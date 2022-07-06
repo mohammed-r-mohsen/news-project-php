@@ -1,4 +1,7 @@
 <?php
+
+
+
 class validator 
 {
     /**
@@ -28,38 +31,74 @@ class validator
        */
 
 
-        private function ValidateNameRequest($name)
+private function __construct() {
+    
+}
+
+   public static function Getinstance() : validator
+   {
+      return new validator();
+   }
+
+
+        private function ValidatePasswordRequest($password) : String
         {
-            
-        }
+                 
+                 
+                 switch ($password) :
+                    case (Strlen($password)<8):
+                        return 'password too short';
+                        break;
+                    case (Strlen($password)>20) :
+                        return 'passsword too long';
+                        break;
+                    case (!preg_match("#[0-9]+#" , $password)) : 
+                        return 'passsword must have at leat one number';
+                        break;
+                    case (!preg_match("#[a-z]+#" , $password)) :
+                        return 'password must have at least one letter';
+                        break;
+                    case (!preg_match("#[A-Z]+#" , $password)) : 
+                        return 'password must have at least one letter caps';
+                        break;
+                    case (!preg_match("#\W+#" , $password)) : 
+                        return 'password must hasve at least one symbol';
+                        break;
+                    default:
+                        return 'success';
+                        break;
+                    endswitch;
+        
+    
+                }
 
-
-        private function ValidatePasswordRequest($password)
+        private function ValidateEmailRequest($Email) : String
         {
-
-        }
-
-        private function ValidateEmailRequest($Email)
-        {
-           
+            return !filter_var($Email , FILTER_VALIDATE_EMAIL) ? 'error email please write another one ' : 'success';
         }
 
        
 
-         public static  function ValidateCategoryRequest(category $category)
+         public static  function ValidateCategory(category $category) : String
          {
-            
+            return ($category->getname()<5) ? 'too short category name' : 'success' ;
          }
          
-         public static  function ValidateNewsRequest(news $News)
+         public   function ValidateNews(news $News) : String
          {
             
+            return  (Strlen($News->gettitle()<10)) ? 'too short News title ' : 'success' ; 
          }
 
 
-         public static function ValidateAdmin(Admin $Admin)
+         public function ValidateAdmin(Admin $Admin) : String 
          {
-
+            $errors = array();
+            $errors =(Strlen($Admin->getName())<8) ? 'too short Admin length' : 'success' ; 
+            $errors = $this->ValidateEmailRequest($Admin->getemail());             
+            $errors = $this->ValidatePasswordRequest($Admin->getpassssword());             
+            
+            return $errors;
          }
 
 
