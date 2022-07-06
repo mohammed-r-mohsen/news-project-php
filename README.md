@@ -9,3 +9,8 @@ regular expression
 file system 
 monitring sytsem 
 full crud system 
+design patterns 
+
+singlton : DB validator  
+mvvm : system
+mvc concept : for sub sytem 
