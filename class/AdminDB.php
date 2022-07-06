@@ -32,7 +32,11 @@ class AdminDB
      {
         $AdminName=$admin->getname();
         $AdminEmail= $admin->getemail();
-        $AdminPassword=$admin->getpassssword();
+
+         
+         
+        $AdminPassword = password_hash($admin->getpassword , PASSWORD_DEFAULT);
+        //$AdminPassword=$admin->getpassssword();
         try {
              DataBase::getDBoperation()->connect();
             
@@ -42,10 +46,10 @@ class AdminDB
             DataBase::getDBoperation()->GetConn()->exec($dbsql);
             DataBase::getDBoperation()->GetConn()->exec($sql);
             
-             return header("Location:http://localhost/news-project/news-project/sufee-admin-dashboard-master/admin-list.php");
+             return header("Location:http://localhost/news-project/sufee-admin-dashboard-master/admin-list.php");
              DataBase::getDBoperation()->disconnect();
         } catch (PDOException $th) {
-            return header("Location:http://localhost/news-project/news-project/sufee-admin-dashboard-master/add-admin.php");
+            return header("Location:http://localhost/news-project/sufee-admin-dashboard-master/add-admin.php");
 
         }
      }
@@ -63,12 +67,12 @@ class AdminDB
              
               
               DataBase::getDBoperation()->disconnect();
-              return header("Location:http://localhost/news-project/news-project/sufee-admin-dashboard-master/admin-list.php");
+              return header("Location:http://localhost/news-project/sufee-admin-dashboard-master/admin-list.php");
 
          
          
             } catch (PDOException $TH) {
-                return header("Location:http://localhost/news-project/news-project/sufee-admin-dashboard-master/admin-list.php");
+                return header("Location:http://localhost/news-project/sufee-admin-dashboard-master/admin-list.php");
 
          }
      }

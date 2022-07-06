@@ -1,11 +1,11 @@
 
-<?php 
- 
-  
+<?php
+
+
   include '../class/NewsDB.php';
   session_start();
   if ($_SESSION["lastpage"] == "Home.php")
-  
+
   {
 
   ?>
@@ -59,7 +59,7 @@
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-puzzle-piece"></i><a href="add-admin.php">Add Admin</a></li>
                             <li><i class="fa fa-id-badge"></i><a href="admin-list.php">Admin List</a></li>
-                           
+
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
@@ -76,7 +76,7 @@
                             <li><i class="menu-icon fa fa-th"></i><a href="news-list.php">News List</a></li>
                         </ul>
                     </li>
-                    
+
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
@@ -95,7 +95,7 @@
 
                 <div class="col-sm-7">
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
-                    
+
                 </div>
 
                 <div class="col-sm-5">
@@ -149,7 +149,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
 
         <div class="content mt-3">
@@ -157,10 +157,10 @@
 
 
                 <div class="row">
-                    
+
                     <!--/.col-->
 
-                    
+
 
                                             <div class="col-lg-6">
                                                 <div class="card">
@@ -168,39 +168,39 @@
                                                         <strong>Basic Form</strong> Elements
                                                     </div>
                                                     <div class="card-body card-block">
-                                                        <?php 
+                                                        <?php
                                                         $row = NewsDB::GetnewsDB()->GetRowData($_GET['title']);
                                                         foreach ($row as $item) {
-                                                            
-                                                         
+
+
                                                         ?>
                                                         <form action="../class/update-new.php?title=<?php echo $_GET['title']?>" method="post"  class="form-horizontal">
-                                                            
+
                                                             <div class="row form-group">
                                                                 <div class="col col-md-3"><label for="text-input" class=" form-control-label">Title</label></div>
                                                                 <div class="col-12 col-md-9"><input type="text" id="text-input" name="title" placeholder="<?php echo $item['title'];?>" value="<?php echo $item['title'];?>" class="form-control"><small class="form-text text-muted">This is a help text</small></div>
                                                             </div>
-                                                            
-                                                            
-                                                            
+
+
+
                                                             <div class="row form-group">
                                                                 <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">News-body</label></div>
                                                                 <div class="col-12 col-md-9"><textarea name="textarea-input" value="<?php echo $item['body'];?>" id="textarea-input" rows="9" placeholder="<?php echo $item['body'];?>" class="form-control"><?php echo $item['body'];?></textarea></div>
                                                              </div>
-                                                                
-                                                                
+
+
                                                                 <div class="row form-group">
                                                                     <div class="col col-md-3"></div>
                                                                     <div class="col-12 col-md-9">
-                                                                        
+
                                                                     </div>
                                                                 </div>
-                                                                
-                                                                
-                                                                
-                                                                
-                                                                
-                                                                
+
+
+
+
+
+
                                                                 <div class="row form-group">
                                                                     <div class="col col-md-3"><label for="file-input" class=" form-control-label">News-Img</label></div>
                                                                     <div class="col-12 col-md-9"><input type="file" id="file-input" name="img" class="form-control-file" value="<?php $item['img'] ; }?>"></div>
@@ -215,32 +215,32 @@
                                                     </div>
                                                         </form>
                                                     </div>
-                                                   
+
                                                 </div>
-                                                
+
                                             </div>
 
-                                            
 
-                                            
 
-                                            
 
-                                            
 
-                                                
 
-                                                
 
-                                                
 
-                                                
 
-                                                
 
-                                                
 
-                                                
+
+
+
+
+
+
+
+
+
+
+
                                             </div>
                                         </div><!-- .animated -->
                                     </div><!-- .content -->
@@ -259,9 +259,9 @@
 
 
 </body>
-<?php 
+<?php
   }
   else {
-    return header("Location:http://localhost/news-project/news-project/login-form-v3/Login_v3/index.php");
+    return header("Location:http://localhost/news-project/login-form-v3/Login_v3/index.php");
   }
 ?>

@@ -39,10 +39,10 @@ class categoryDB
             DataBase::getDBoperation()->GetConn()->exec($dbsql);
             DataBase::getDBoperation()->GetConn()->exec($sql);
             
-             return header("Location:http://localhost/news-project/news-project/sufee-admin-dashboard-master/category-list.php");
+             return header("Location:http://localhost/news-project/sufee-admin-dashboard-master/category-list.php");
              DataBase::getDBoperation()->disconnect();
         } catch (PDOException $th) {
-            return header("Location:http://localhost/news-project/news-project/sufee-admin-dashboard-master/category-list.php");
+            return header("Location:http://localhost/news-project/sufee-admin-dashboard-master/category-list.php");
 
         }
      }
@@ -60,12 +60,12 @@ class categoryDB
              
               
               DataBase::getDBoperation()->disconnect();
-              return header("Location:http://localhost/news-project/news-project/sufee-admin-dashboard-master/category-list.php");
+              return header("Location:http://localhost/news-project/sufee-admin-dashboard-master/category-list.php");
 
          
          
             } catch (PDOException $TH) {
-                return header("Location:http://localhost/news-project/news-project/sufee-admin-dashboard-master/category-list.php");
+                return header("Location:http://localhost/news-project/sufee-admin-dashboard-master/category-list.php");
 
          }
      }

@@ -56,7 +56,7 @@ if ($_SESSION["lastpage"] == "Home.php")
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-puzzle-piece"></i><a href="add-admin.php">Add Admin</a></li>
                             <li><i class="fa fa-id-badge"></i><a href="admin-list.php">Admin List</a></li>
-                           
+
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
@@ -73,7 +73,7 @@ if ($_SESSION["lastpage"] == "Home.php")
                             <li><i class="menu-icon fa fa-th"></i><a href="news-list.php">News List</a></li>
                         </ul>
                     </li>
-                    
+
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
@@ -92,7 +92,7 @@ if ($_SESSION["lastpage"] == "Home.php")
 
                 <div class="col-sm-7">
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
-                    
+
                 </div>
 
                 <div class="col-sm-5">
@@ -146,7 +146,7 @@ if ($_SESSION["lastpage"] == "Home.php")
                     </div>
                 </div>
             </div>
-            
+
         </div>
 
         <div class="content mt-3">
@@ -154,10 +154,10 @@ if ($_SESSION["lastpage"] == "Home.php")
 
 
                 <div class="row">
-                    
+
                     <!--/.col-->
 
-                    
+
 
                                             <div class="col-lg-6">
                                                 <div class="card">
@@ -166,14 +166,14 @@ if ($_SESSION["lastpage"] == "Home.php")
                                                     </div>
                                                     <div class="card-body card-block">
                                                         <form action="../class/main.php" method="post" enctype="multipart/form-data" class="form-horizontal">
-                                                            
+
                                                             <div class="row form-group">
                                                                 <div class="col col-md-3"><label for="text-input" class=" form-control-label">Title</label></div>
                                                                 <div class="col-12 col-md-9"><input type="text" id="text-input" name="title" placeholder="title" class="form-control"><small class="form-text text-muted">This is a help text</small></div>
                                                             </div>
-                                                            
-                                                            
-                                                            
+
+
+
                                                             <div class="row form-group">
                                                                 <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">News-body</label></div>
                                                                 <div class="col-12 col-md-9"><textarea name="textarea-input"  id="textarea-input" rows="9" placeholder="Content..." class="form-control"></textarea></div>
@@ -184,31 +184,31 @@ if ($_SESSION["lastpage"] == "Home.php")
                                                                         <select name="category" id="select" class="form-control">
                                                                         <option value="0">Please select</option>
                                                                            <?php
-                                                                           
+
                                                                             $category = categoryDB::GetCategoryDB()->GetCategoryData();
                                                                             foreach ($category as $item) {
-                                                                               echo ' <option value=' . $item["name"]. "> " . $item["name"] . "</option> " ; 
+                                                                               echo ' <option value=' . $item["name"]. "> " . $item["name"] . "</option> " ;
                                                                             }
                                                                             ?>
-                                                                            
-                                                                            
-                                                                           
+
+
+
                                                                         </select>
                                                                     </div>
                                                                 </div>
-                                                                
+
                                                                 <div class="row form-group">
                                                                     <div class="col col-md-3"></div>
                                                                     <div class="col-12 col-md-9">
-                                                                        
+
                                                                     </div>
                                                                 </div>
-                                                                
-                                                                
-                                                                
-                                                                
-                                                                
-                                                                
+
+
+
+
+
+
                                                                 <div class="row form-group">
                                                                     <div class="col col-md-3"><label for="file-input" class=" form-control-label">News-Img</label></div>
                                                                     <div class="col-12 col-md-9"><input type="file" id="file-input" name="img" class="form-control-file"></div>
@@ -223,32 +223,32 @@ if ($_SESSION["lastpage"] == "Home.php")
                                                     </div>
                                                         </form>
                                                     </div>
-                                                   
+
                                                 </div>
-                                                
+
                                             </div>
 
-                                            
 
-                                            
 
-                                            
 
-                                            
 
-                                                
 
-                                                
 
-                                                
 
-                                                
 
-                                                
 
-                                                
 
-                                                
+
+
+
+
+
+
+
+
+
+
+
                                             </div>
                                         </div><!-- .animated -->
                                     </div><!-- .content -->
@@ -268,11 +268,11 @@ if ($_SESSION["lastpage"] == "Home.php")
 
 </body>
 
-<?php 
+<?php
   }
   else {
-    //return header("Location:http://localhost/news-project/news-project/login-form-v3/Login_v3/index.php");
-  
-   echo $_SESSION["lastpage"] ; 
+    //return header("Location:http://localhost/news-project/login-form-v3/Login_v3/index.php");
+
+   echo $_SESSION["lastpage"] ;
 }
 ?>

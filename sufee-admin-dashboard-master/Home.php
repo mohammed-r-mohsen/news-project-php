@@ -64,15 +64,15 @@ if (login::getIsActive())
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>ADMIN</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-puzzle-piece"></i><a href="add-admin.html">Add Admin</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="add-admin.php">Add Admin</a></li>
                             <li><i class="fa fa-id-badge"></i><a href="admin-list.php">Admin List</a></li>
-                           
+
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>CATEGORY</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-table"></i><a href="add-category.html">Add category</a></li>
+                            <li><i class="fa fa-table"></i><a href="add-category.php">Add category</a></li>
                             <li><i class="fa fa-table"></i><a href="category-list.php">category List</a></li>
                         </ul>
                     </li>
@@ -83,7 +83,7 @@ if (login::getIsActive())
                             <li><i class="menu-icon fa fa-th"></i><a href="news-list.php">News List</a></li>
                         </ul>
                     </li>
-                    
+
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
@@ -102,7 +102,7 @@ if (login::getIsActive())
 
                 <div class="col-sm-7">
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
-                    
+
                 </div>
 
                 <div class="col-sm-5">
@@ -118,7 +118,7 @@ if (login::getIsActive())
 
                             <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a>
 
-                            <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Logout</a>
+                            <a href="../class/logout.php" class="nav-link" href="#"><i class="fa fa-power-off"></i> Logout</a>
                         </div>
                     </div>
 
@@ -410,9 +410,9 @@ if (login::getIsActive())
 
 </html>
 
-<?php 
+<?php
   }
   else {
-    return header("Location:http://localhost/news-project/news-project/login-form-v3/Login_v3/index.php");
+    return header("Location:http://localhost/news-project/login-form-v3/Login_v3/index.php");
   }
 ?>

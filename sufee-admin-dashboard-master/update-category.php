@@ -1,5 +1,5 @@
 
-<?php 
+<?php
 session_start();
 if ($_SESSION["lastpage"] == "Home.php")
 
@@ -55,7 +55,7 @@ if ($_SESSION["lastpage"] == "Home.php")
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-puzzle-piece"></i><a href="add-admin.php">Add Admin</a></li>
                             <li><i class="fa fa-id-badge"></i><a href="admin-list.php">Admin List</a></li>
-                           
+
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
@@ -72,7 +72,7 @@ if ($_SESSION["lastpage"] == "Home.php")
                             <li><i class="menu-icon fa fa-th"></i><a href="news-list.php">News List</a></li>
                         </ul>
                     </li>
-                    
+
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
@@ -91,7 +91,7 @@ if ($_SESSION["lastpage"] == "Home.php")
 
                 <div class="col-sm-7">
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
-                    
+
                 </div>
 
                 <div class="col-sm-5">
@@ -145,7 +145,7 @@ if ($_SESSION["lastpage"] == "Home.php")
                     </div>
                 </div>
             </div>
-            
+
         </div>
 
         <div class="content mt-3">
@@ -153,38 +153,38 @@ if ($_SESSION["lastpage"] == "Home.php")
 
 
                 <div class="row">
-                    
+
                     <!--/.col-->
 
-                    
 
-                                            
 
-                                            
 
-                                            
 
-                                            
 
-                                            
 
-                                                
 
-                                                
 
-                                                
 
-                                                
 
-                                                
 
-                                                
+
+
+
+
+
+
+
+
+
+
+
+
 
                                                 <div class="col-lg-6">
                                                     <div class="card">
                                                         <div class="card-header">EDit Category</div>
                                                         <div class="card-body card-block">
-                                                            
+
                                                             <form action="../class/update.php?name=<?php echo $_GET['name']?>" method="post" class="">
                                                                 <div class="form-group">
                                                                     <div class="input-group">
@@ -192,8 +192,8 @@ if ($_SESSION["lastpage"] == "Home.php")
                                                                         <input type="text" id="username" name="UpdateCategory" placeholder="<?php echo $_GET['name'] ?>" class="form-control">
                                                                     </div>
                                                                 </div>
-                                                                
-                                        
+
+
                                                                 <div class="form-actions form-group"><button type="submit" name="updatesubmit" class="btn btn-success btn-sm">Submit</button></div>
                                                             </form>
                                                         </div>
@@ -218,9 +218,9 @@ if ($_SESSION["lastpage"] == "Home.php")
 
 </body></html>
 
-<?php 
+<?php
   }
   else {
-    return header("Location:http://localhost/news-project/news-project/login-form-v3/Login_v3/index.php");
+    return header("Location:http://localhost/news-project/login-form-v3/Login_v3/index.php");
   }
 ?>

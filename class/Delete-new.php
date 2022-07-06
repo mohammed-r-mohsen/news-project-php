@@ -6,6 +6,6 @@ try{
 
 }catch(PDOException $e)
 {
-    return header("Location:http://localhost/news-project/news-project/sufee-admin-dashboard-master/category-list.php");
+    return header("Location:http://localhost/news-project/sufee-admin-dashboard-master/category-list.php");
 
 }

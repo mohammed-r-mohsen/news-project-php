@@ -21,15 +21,15 @@ class login
 
       foreach ($row as $item) {
            
-           
-           if($item['username'] == $username && $item['password'] == $password)
+             $verfiy = password_verify($item['password'] , $password);
+           if($item['username'] == $username && $verfiy)
            {
               self::setisActive(true); 
-            return header("Location:http://localhost/news-project/news-project/sufee-admin-dashboard-master/Home.php");
+            return header("Location:http://localhost/news-project/sufee-admin-dashboard-master/Home.php");
            }else
            {
              
-           return header("Location:http://localhost/news-project/news-project/login-form-v3/Login_v3/index.php");
+           return header("Location:http://localhost/news-project/login-form-v3/Login_v3/index.php");
       }}
   
     }

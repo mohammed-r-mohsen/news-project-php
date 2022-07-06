@@ -1,6 +1,6 @@
 
 
-<?php 
+<?php
 require_once '../class/AdminDB.php';
 session_start();
 if ($_SESSION["lastpage"] == "Home.php")
@@ -57,7 +57,7 @@ if ($_SESSION["lastpage"] == "Home.php")
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-puzzle-piece"></i><a href="add-admin.php">Add Admin</a></li>
                             <li><i class="fa fa-id-badge"></i><a href="admin-list.php">Admin List</a></li>
-                           
+
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
@@ -74,7 +74,7 @@ if ($_SESSION["lastpage"] == "Home.php")
                             <li><i class="menu-icon fa fa-th"></i><a href="news-list.php">News List</a></li>
                         </ul>
                     </li>
-                    
+
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
@@ -93,7 +93,7 @@ if ($_SESSION["lastpage"] == "Home.php")
 
                 <div class="col-sm-7">
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
-                    
+
                 </div>
 
                 <div class="col-sm-5">
@@ -148,7 +148,7 @@ if ($_SESSION["lastpage"] == "Home.php")
                 </div>
             </div>
             <div class="col-sm-8">
-                
+
             </div>
         </div>
 
@@ -171,14 +171,14 @@ if ($_SESSION["lastpage"] == "Home.php")
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php 
-                                        
+                                        <?php
+
                                         try {
                                             $row = AdminDB::GetAdminDB()->GetAdminData();
-                                           foreach ($row as $admin)  
-                                           { 
+                                           foreach ($row as $admin)
+                                           {
                                                $adminName = $admin['username'];
-                                              echo 
+                                              echo
                                               "
                                               <tr>
                                               <th scope='row'>". $admin["id"] . "</th>
@@ -186,22 +186,22 @@ if ($_SESSION["lastpage"] == "Home.php")
                                               <td>" . $admin["email"] . "</td>
                                               <td> " . $admin["numOfNews"] . "</td>
                                               <td>
-                                                  <a  href='../class/Delete-Admin.php?name=$adminName'><span class='ti-trash'></span><span class='icon-name'></span></a> 
+                                                  <a  href='../class/Delete-Admin.php?name=$adminName'><span class='ti-trash'></span><span class='icon-name'></span></a>
                                                    <a  href='./update-admin.php?name=$adminName'><span class='ti-settings'></span><span class='icon-name'></span></a>
-                                              
+
                                                    </td>
                                           </tr>
-                                          ";    
+                                          ";
                                            }
                                        } catch (Throwable $e) {
                                            echo $e->getLine();
                                            echo $e->getFile();
                                            echo $e->getMessage();
-                                        
-                                           
+
+
                                        }
                                         ?>
-                                       
+
                                         <!--
                                         <tr>
                                             <th scope="row">2</th>
@@ -209,7 +209,7 @@ if ($_SESSION["lastpage"] == "Home.php")
                                             <td>Thornton</td>
                                             <td>@fat</td>
                                             <td>
-                                                <a><span class="ti-trash"></span><span class="icon-name"></span></a> 
+                                                <a><span class="ti-trash"></span><span class="icon-name"></span></a>
                                                  <a><span class="ti-settings"></span><span class="icon-name"></span></a>
                                              </td>
                                         </tr>
@@ -219,7 +219,7 @@ if ($_SESSION["lastpage"] == "Home.php")
                                             <td>the Bird</td>
                                             <td>@twitter</td>
                                             <td>
-                                               <a><span class="ti-trash"></span><span class="icon-name"></span></a> 
+                                               <a><span class="ti-trash"></span><span class="icon-name"></span></a>
                                                 <a><span class="ti-settings"></span><span class="icon-name"></span></a>
                                             </td>
                                         </tr>
@@ -230,16 +230,16 @@ if ($_SESSION["lastpage"] == "Home.php")
                         </div>
                     </div>
 
-                    
-
-                    
 
 
-                    
 
-                    
 
-                    
+
+
+
+
+
+
 
                 </div>
             </div><!-- .animated -->
@@ -262,12 +262,11 @@ if ($_SESSION["lastpage"] == "Home.php")
 
 </body></html>
 
-<?php 
+<?php
   }
   else {
-    return header("Location:http://localhost/news-project/news-project/login-form-v3/Login_v3/index.php");
+    return header("Location:http://localhost/news-project/login-form-v3/Login_v3/index.php");
   }
 ?>
 
 
-                            

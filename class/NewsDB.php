@@ -45,10 +45,10 @@ class NewsDB
             DataBase::getDBoperation()->GetConn()->exec($dbsql);
             DataBase::getDBoperation()->GetConn()->exec($sql);
             
-             return header("Location:http://localhost/news-project/news-project/sufee-admin-dashboard-master/news-list.php");
+             return header("Location:http://localhost/news-project/sufee-admin-dashboard-master/news-list.php");
              DataBase::getDBoperation()->disconnect();
         } catch (PDOException $th) {
-            return header("Location:http://localhost/news-project/news-project/sufee-admin-dashboard-master/add-News.php");
+            return header("Location:http://localhost/news-project/sufee-admin-dashboard-master/add-News.php");
 
         }
      }
@@ -66,12 +66,12 @@ class NewsDB
              
               
               DataBase::getDBoperation()->disconnect();
-              return header("Location:http://localhost/news-project/news-project/sufee-admin-dashboard-master/news-list.php");
+              return header("Location:http://localhost/news-project/sufee-admin-dashboard-master/news-list.php");
 
          
          
             } catch (PDOException $TH) {
-                return header("Location:http://localhost/news-project/news-project/sufee-admin-dashboard-master/news-list.php");
+                return header("Location:http://localhost/news-project/sufee-admin-dashboard-master/news-list.php");
 
          }
      }

@@ -1,5 +1,5 @@
 
-<?php 
+<?php
 include '../class/NewsDB.php';
 
 session_start();
@@ -64,7 +64,7 @@ if ($_SESSION["lastpage"] == "Home.php")
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-puzzle-piece"></i><a href="add-admin.php">Add Admin</a></li>
                             <li><i class="fa fa-id-badge"></i><a href="admin-list.php">Admin List</a></li>
-                           
+
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
@@ -81,7 +81,7 @@ if ($_SESSION["lastpage"] == "Home.php")
                             <li><i class="menu-icon fa fa-th"></i><a href="news-list.php">News List</a></li>
                         </ul>
                     </li>
-                    
+
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
@@ -100,7 +100,7 @@ if ($_SESSION["lastpage"] == "Home.php")
 
                 <div class="col-sm-7">
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
-                    
+
                 </div>
 
                 <div class="col-sm-5">
@@ -154,7 +154,7 @@ if ($_SESSION["lastpage"] == "Home.php")
                     </div>
                 </div>
             </div>
-            
+
         </div>
 
         <div class="content mt-3">
@@ -173,7 +173,7 @@ if ($_SESSION["lastpage"] == "Home.php")
                                             <th>Title</th>
                                             <th>Category</th>
                                             <th>Author</th>
-                                            
+
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -187,17 +187,17 @@ if ($_SESSION["lastpage"] == "Home.php")
                                         <td>" . $item['title'] ."</td>
                                         <td>"  .$item['category'] . "</td>
                                         <td>" . $item['author'] . "</td>
-                                        <td> 
-                                        <a  href='../class/Delete-new.php?name=$newstitle'><span class='ti-trash'></span><span class='icon-name'></span></a> 
+                                        <td>
+                                        <a  href='../class/Delete-new.php?name=$newstitle'><span class='ti-trash'></span><span class='icon-name'></span></a>
                                         <a  href='./update-News.php?title=$newstitle'><span class='ti-settings'></span><span class='icon-name'></span></a>
-                                   
+
                                         </td>
                                         </tr>";
                                      }
-                                    
+
                                     ?>
-                                       
-                                       
+
+
                                     </tbody>
                                 </table>
                             </div>
@@ -237,9 +237,9 @@ if ($_SESSION["lastpage"] == "Home.php")
 </body>
 
 </html>
-<?php 
+<?php
   }
   else {
-    return header("Location:http://localhost/news-project/news-project/login-form-v3/Login_v3/index.php");
+    return header("Location:http://localhost/news-project/login-form-v3/Login_v3/index.php");
   }
 ?>

@@ -1,5 +1,5 @@
 
-<?php 
+<?php
 session_start();
 if ($_SESSION["lastpage"] == "Home.php")
 
@@ -56,7 +56,7 @@ if ($_SESSION["lastpage"] == "Home.php")
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-puzzle-piece"></i><a href="add-admin.php">Add Admin</a></li>
                             <li><i class="fa fa-id-badge"></i><a href="admin-list.php">Admin List</a></li>
-                           
+
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
@@ -73,7 +73,7 @@ if ($_SESSION["lastpage"] == "Home.php")
                             <li><i class="menu-icon fa fa-th"></i><a href="news-list.php">News List</a></li>
                         </ul>
                     </li>
-                    
+
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
@@ -92,7 +92,7 @@ if ($_SESSION["lastpage"] == "Home.php")
 
                 <div class="col-sm-7">
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
-                    
+
                 </div>
 
                 <div class="col-sm-5">
@@ -146,7 +146,7 @@ if ($_SESSION["lastpage"] == "Home.php")
                     </div>
                 </div>
             </div>
-            
+
         </div>
 
         <div class="content mt-3">
@@ -154,39 +154,39 @@ if ($_SESSION["lastpage"] == "Home.php")
 
 
                 <div class="row">
-                    
+
                     <!--/.col-->
 
-                    
 
-                                            
 
-                                            
 
-                                            
 
-                    
-                                                
 
-                                                
 
-                                                
-                    
+
+
+
+
+
+
+
+
+
                                                 <div class="col-lg-6">
                                                     <div class="card">
                                                         <div class="card-header">Add Admin</div>
                                                         <div class="card-body card-block">
-                                                            
+
                                                             <form action="../class/main.php" method="post">
-                                                                
+
                                                                                                                                                                               <div class="form-group">
                                                                     <div class="input-group">
                                                                         <div class="input-group-addon"><i class="fa fa-user"></i></div>
                                                                         <input type="text" id="Category-name" name="Category" placeholder="Category" class="form-control">
                                                                     </div>
                                                                 </div>
-                                                                
-                                        
+
+
                                                                 <div class="form-actions form-group"><input type="submit" name="categorySubmit" class="btn btn-success btn-sm" value = "ADD" /></div>
                                                             </form>
                                                         </div>
@@ -211,9 +211,9 @@ if ($_SESSION["lastpage"] == "Home.php")
 
 </body></html>
 
-<?php 
+<?php
   }
   else {
-    return header("Location:http://localhost/news-project/news-project/login-form-v3/Login_v3/index.php");
+    return header("Location:http://localhost/news-project/login-form-v3/Login_v3/index.php");
   }
 ?>
