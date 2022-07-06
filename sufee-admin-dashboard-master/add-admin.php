@@ -149,6 +149,8 @@ if ($_SESSION["lastpage"] == "Home.php")
 
         </div>
 
+
+
         <div class="content mt-3">
             <div class="animated fadeIn">
 
@@ -180,8 +182,57 @@ if ($_SESSION["lastpage"] == "Home.php")
 
 
 
-
                                                 <div class="col-lg-6">
+
+                                                <?php
+
+                                                 if (!empty($_SESSION['errors'])) {
+                                                      foreach ($_SESSION['errors'] as $key => $error) {
+                                                           if ($error != null)
+                                                           {
+                                                            if(is_array($error))
+                                                            {
+                                                                foreach ($error as $key => $item)
+                                                                {
+                                                                    ?>
+
+                                            <div class='alert alert-danger'>
+                                               <strong>Danger!<?php echo $item;?></strong>
+                                            </div>
+
+                                                <?php
+
+
+
+
+
+                                                            }
+                                                            
+                                                            }else
+                                                            {
+                                                                ?>
+
+                                              <div class='alert alert-danger'>
+                                                   <strong>Danger!<?php echo $error; ?></strong>
+                                                </div>
+
+                                            <?php
+                                                            }
+                                                            unset($_SESSION['errors'][$key]);
+
+                                                        }
+
+
+
+                                                                    }
+
+
+                                                                }
+
+
+
+                                                    ?>
+
                                                     <div class="card">
                                                         <div class="card-header">Add Admin</div>
                                                         <div class="card-body card-block">

@@ -1,14 +1,7 @@
 <?php 
-include '../class/AdminDB.php';
+include './Admin.php';
 
-$row =  AdminDB::GetAdminDB()->GetAdminData();
-$string = "admin";
-print password_hash($string , PASSWORD_DEFAULT) . '<br>';
-foreach ($row as  $value) {
-print $value['password'];
+$string  = "mMoh"; 
 
-    //    var_dump(password_verify($string, $value['password']));
-}
-
-
+var_dump(!preg_match('(A-Z)', $string));
  
