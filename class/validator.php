@@ -56,9 +56,9 @@ private function __construct()
          *
          * 
          */
-           if (!preg_match('(A-Z)', $password)) 
+           if (!preg_match('([A-Z])', $password)) 
             {
-                $errorpassword[] = 'the password must have at leats one upper case ';
+                $errorpassword[] = 'the password must have at leats one upper case  ' . $password;
             }
 
             /**
@@ -67,7 +67,7 @@ private function __construct()
              */
         if (!preg_match('([a-z])', $password)) 
             {
-                $errorpassword[] = 'the password must have at leats one lower case ';
+                $errorpassword[] = 'the password must have at leats one lower case '. $password;
             }
         /**
          * this is valiidator for the passwor dmust contains the number 
@@ -119,19 +119,22 @@ private function __construct()
 
         private function ValidateEmailRequest($Email) 
         {
-            return !filter_var($Email , FILTER_VALIDATE_EMAIL) ? 'error email please write another one ' : null;
+            if(!filter_var($Email , FILTER_VALIDATE_EMAIL))
+            return 'error email please write another one ' ;
         }
 
        
 
-         public   function ValidateCategory(category $category) : String
+         public   function ValidateCategory(category $category) 
          {
-            return ($category->getname()<5) ? 'too short category name' : null ;
+            if($category->getname()<5)
+            return 'too short category name' ;
          }
          
-         public   function ValidateNews(news $News) : String
+         public   function ValidateNews(news $News) 
          {
-            return  (Strlen($News->gettitle()<10)) ? 'too short News title ' : null ; 
+            if(Strlen($News->gettitle()<10))
+            return 'too short News title '; 
          }
          
          private function ValidatepasswordLenght($password) 
@@ -140,14 +143,20 @@ private function __construct()
                return 'password too short' ;
             elseif(strlen($password)>20)
                return 'password too long';
-         return null ; 
+         
          }
 
+         
+         private function validtaeAdminName($name)
+         {
+            if(Strlen($name)<8)
+            return 'too short Admin name length';
+         }
          public function ValidateAdmin(Admin $Admin) : array 
          {
             $errors = array();
             
-            $errors[] =(Strlen($Admin->getName())<8) ? 'too short Admin name length' :null ; 
+            $errors[] =$this->validtaeAdminName($Admin->getName()); 
             
             $errors[] = $this->ValidateEmailRequest($Admin->getemail());            
             

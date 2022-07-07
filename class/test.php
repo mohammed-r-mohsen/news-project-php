@@ -1,7 +1,28 @@
 <?php 
 include './Admin.php';
 
-$string  = "mMoh"; 
+$arrayName = array();
 
-var_dump(!preg_match('(A-Z)', $string));
+
+array_push($arrayName, null);
+array_push($arrayName, null);
+array_push($arrayName, null);
+array_push($arrayName, null);
+array_push($arrayName, null);
+array_push($arrayName, null);
+array_push($arrayName, null);
+array_push($arrayName, 'name');
+array_push($arrayName, null);
+array_push($arrayName, null);
+array_push($arrayName, null);
+array_push($arrayName, null);
+array_push($arrayName, null);
+array_push($arrayName, null);
+array_push($arrayName, null);
+array_push($arrayName, null);
+array_push($arrayName, null);
+
+
+
+var_dump($arrayName);
  

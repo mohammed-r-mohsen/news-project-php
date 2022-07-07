@@ -192,28 +192,39 @@ if ($_SESSION["lastpage"] == "Home.php")
                                                            {
                                                             if(is_array($error))
                                                             {
-                                                                foreach ($error as $key => $item)
+                                                                foreach ($error as $errorkey => $item)
                                                                 {
                                                                     ?>
 
-                                            <div class='alert alert-danger'>
-                                               <strong>Danger!<?php if($item!=null)echo $item;?></strong>
-                                            </div>
+                                                                     <div class='alert alert-danger'>
+                                                                         <strong>Danger!<?php if($item!=null)
+                                                                         {
 
-                                                <?php
+                                                                             echo $item;
+
+                                                                             unset($_SESSION['errors'][$key][$errorkey]);
+
+
+
+                                                                         }?></strong>
+                                                                     </div>
+
+
+
+                                                                                   <?php
 
 
 
 
 
-                                                            }
-                                                            
+                                                                }
 
-                                                        }else
-                                                            {
-                                                                ?>
 
-                                              <div class='alert alert-danger'>
+                                                                 }else
+                                                                 {
+                                                                                 ?>
+
+                                                                    <div class='alert alert-danger'>
                                                    <strong>Danger!<?php echo $error; ?></strong>
                                                 </div>
 

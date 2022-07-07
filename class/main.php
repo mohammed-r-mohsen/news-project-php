@@ -4,7 +4,29 @@ include './autoloader.php';
 
 // add the new category 
 
- if(isset($_POST['categorySubmit']))
+
+
+
+
+ function FoundError(array $array):bool
+{
+     $founded = false ; 
+     foreach ($array as $key => $value) {
+         if(!is_null($value))
+          {
+            $founded = true ; 
+             break;
+          }
+     }
+    return $founded ; 
+}
+
+
+
+
+
+
+if(isset($_POST['categorySubmit']))
  {
    
      
@@ -31,7 +53,7 @@ try {
     $error =  validator::Getinstance()->ValidateAdmin($admin);
   session_start();
    $_SESSION['errors'] = $error;
-   if(empty($error))
+   if(FoundError($error))
     AdminDB::GetAdminDB()->CreateAdmin($admin);
     else
         header("Location: http://localhost/news-project/sufee-admin-dashboard-master/add-admin.php");

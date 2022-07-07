@@ -43,9 +43,12 @@ class AdminDB
     
             DataBase::getDBoperation()->GetConn()->exec($dbsql);
             DataBase::getDBoperation()->GetConn()->exec($sql);
+            session_start();
+            $_SESSION['addAdmin'] = "success create admin " ; 
+             
+            return header("Location:http://localhost/news-project/sufee-admin-dashboard-master/admin-list.php");
             
-             return header("Location:http://localhost/news-project/sufee-admin-dashboard-master/admin-list.php");
-             DataBase::getDBoperation()->disconnect();
+            DataBase::getDBoperation()->disconnect();
         } catch (PDOException $th) {
             return header("Location:http://localhost/news-project/sufee-admin-dashboard-master/add-admin.php");
 

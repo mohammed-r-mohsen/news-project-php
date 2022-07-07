@@ -148,11 +148,15 @@ if ($_SESSION["lastpage"] == "Home.php")
                 </div>
             </div>
             <div class="col-sm-8">
-            
+
+            <?php if(!is_null($_SESSION['addAdmin'])) { ?>
             <div class="alert alert-success">
-                <strong><?php session_start(); echo $_SESSION['addAdmin'] ?></strong>
+                <strong><?php echo $_SESSION['addAdmin']  ?></strong>
             </div>
-            </div>
+            <?php }?>
+
+
+        </div>
         </div>
 
         <div class="content mt-3">
