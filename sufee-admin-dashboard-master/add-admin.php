@@ -185,7 +185,7 @@ if ($_SESSION["lastpage"] == "Home.php")
                                                 <div class="col-lg-6">
 
                                                 <?php
-
+/*
                                                  if (!empty($_SESSION['errors'])) {
                                                       foreach ($_SESSION['errors'] as $key => $error) {
                                                            if ($error != null)
@@ -241,7 +241,7 @@ if ($_SESSION["lastpage"] == "Home.php")
                                          }
 
 
-
+*/
                                                     ?>
 
                                                     <div class="card">

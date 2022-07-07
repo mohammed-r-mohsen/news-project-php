@@ -2,6 +2,8 @@
 
 <?php
 require_once '../class/AdminDB.php';
+
+
 session_start();
 if ($_SESSION["lastpage"] == "Home.php")
 
@@ -149,11 +151,11 @@ if ($_SESSION["lastpage"] == "Home.php")
             </div>
             <div class="col-sm-8">
 
-            <?php if(!is_null($_SESSION['addAdmin'])) { ?>
+            <?php /* if(!is_null($GLOBALS['addAdmin'])) { ?>
             <div class="alert alert-success">
-                <strong><?php echo $_SESSION['addAdmin']  ?></strong>
+                <strong><?php echo $GLOBALS['addAdmin']  ?></strong>
             </div>
-            <?php }?>
+            <?php }*/?>
 
 
         </div>

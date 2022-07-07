@@ -51,12 +51,12 @@ try {
     $admin = new Admin($_POST['username'] , $_POST['email'] , $_POST['password']);
     $error = array();
     $error =  validator::Getinstance()->ValidateAdmin($admin);
-  session_start();
-   $_SESSION['errors'] = $error;
-   if(FoundError($error))
+ // session_start();
+ //  $_SESSION['errors'] = $error;
+  // if(FoundError($error))
     AdminDB::GetAdminDB()->CreateAdmin($admin);
-    else
-        header("Location: http://localhost/news-project/sufee-admin-dashboard-master/add-admin.php");
+    //else
+      //  header("Location: http://localhost/news-project/sufee-admin-dashboard-master/add-admin.php");
          
     
 } catch (Throwable $e) {
