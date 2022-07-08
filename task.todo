@@ -1,0 +1,32 @@
+☐ error notifer
+   ☐ error login 
+   ☐ cattegory 
+   ☐ News 
+      ☐ img check validator 
+      ☐ size 
+   ☐ update Admin
+   ☐ update Category
+   ☐ update News
+   ☐ dublicate info 
+     ☐ dublicate admin pass  
+     ☐ dublicate admin email
+     ☐ dublicate admin name
+     ☐ dublicate update admin name
+     ☐ dublicate update admin email
+     ☐ change the pasword dchange alog 
+     ☐ duublicate category name  
+     ☐ duublicate updtae category name  
+     ☐ duublicate news title  
+     ☐ duublicate updtae news title  
+success error 
+    ☐ succes login
+    ☐ succes add admin
+    ☐ succes add caegory
+    ☐ succes add news
+    ☐ succes update admin
+    ☐ succes update category
+    ☐ succes update news
+    ☐ succes delete admin
+    ☐ succes delete category
+    ☐ succes delete news
+
