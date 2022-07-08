@@ -119,6 +119,7 @@ private function __construct()
 
         private function ValidateEmailRequest($Email) 
         {
+            
             if(!filter_var($Email , FILTER_VALIDATE_EMAIL))
             return 'error email please write another one ' ;
         }

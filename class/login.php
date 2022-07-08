@@ -24,7 +24,7 @@ class login
            
             
              $verfiy = password_verify($password, $item['password'] );
-          
+              
 
           if(($item['username'] == $username) && $verfiy)
            {
