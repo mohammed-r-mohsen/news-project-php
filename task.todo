@@ -1,25 +1,32 @@
-☐ error notifer
-   ☐ error login 
+error notifer
+   ✔ error login @done (7/8/2022, 6:46:20 AM)
    ☐ cattegory 
+   ✔ admin error @done (7/8/2022, 6:51:34 AM)
+     ✔ caps letter @done (7/8/2022, 6:51:38 AM)
+     ✔ small letter @done (7/8/2022, 6:51:41 AM)
+     ✔ number founded @done (7/8/2022, 6:51:44 AM)
+     ✔ symbole founded @done (7/8/2022, 6:51:46 AM)
+     ✔ sort password @done (7/8/2022, 6:51:50 AM)
+     ✔ long password @done (7/8/2022, 6:51:54 AM)
    ☐ News 
-      ☐ img check validator 
-      ☐ size 
+    ☐ img check validator 
+    ☐ size 
    ☐ update Admin
    ☐ update Category
    ☐ update News
    ☐ dublicate info 
-     ☐ dublicate admin pass  
-     ☐ dublicate admin email
-     ☐ dublicate admin name
-     ☐ dublicate update admin name
-     ☐ dublicate update admin email
-     ☐ change the pasword dchange alog 
-     ☐ duublicate category name  
-     ☐ duublicate updtae category name  
-     ☐ duublicate news title  
-     ☐ duublicate updtae news title  
+    ☐ dublicate admin pass  
+    ☐ dublicate admin email
+    ☐ dublicate admin name
+    ☐ dublicate update admin name
+    ☐ dublicate update admin email
+    ☐ change the pasword dchange alog 
+    ☐ duublicate category name  
+    ☐ duublicate updtae category name  
+    ☐ duublicate news title  
+    ☐ duublicate updtae news title  
 success error 
-    ☐ succes login
+    ✔ succes login @done (7/8/2022, 6:46:24 AM)
     ☐ succes add admin
     ☐ succes add caegory
     ☐ succes add news

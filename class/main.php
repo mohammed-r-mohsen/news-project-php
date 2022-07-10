@@ -33,8 +33,9 @@ if(isset($_POST['categorySubmit']))
     try {
         
         $category = new category($_POST['Category']);
-        categoryDB::GetCategoryDB()->CreateCategory($category);
-       
+          categoryDB::GetCategoryDB()->CreateCategory($category);
+    //header("Location: http://localhost/news-project/sufee-admin-dashboard-master/add-category.php");
+
        
     } catch (Throwable $e) {
       

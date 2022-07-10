@@ -18,20 +18,19 @@ class login
     public static function loginMethod($username , $password)
     {
        $row =  AdminDB::GetAdminDB()->GetAdminData();
-
-      foreach ($row as $item) 
+       $_SESSION['LoginStatues'] = 'error login please try again ' ;
+       foreach ($row as $item) 
     {
            
-            
-             $verfiy = password_verify($password, $item['password'] );
-              
-
-          if(($item['username'] == $username) && $verfiy)
-           {
+      
+             $verfiypassword = password_verify($password, $item['password'] );
+             $verfiyusername = strcmp($item['username'] , $username)==0 ;
+             
+          if($verfiyusername && $verfiypassword) :  
               self::setisActive(true); 
+              $_SESSION['LoginStatues'] = "welcome $username ";
             return header("Location:http://localhost/news-project/sufee-admin-dashboard-master/Home.php");
-           
-          }
+          endif;
         
     }
     return header("Location:http://localhost/news-project/login-form-v3/Login_v3/index.php");

@@ -171,7 +171,13 @@ if ($_SESSION["lastpage"] == "Home.php")
 
 
 
+                                               <div class="alert alert-danger">
+                                                <?php
+                                                if(!is_null($_SESSION['Addcategory']))
+                                                      echo $_SESSION['Addcategory'] ; 
+                                                ?>
 
+                                               </div>
                                                 <div class="col-lg-6">
                                                     <div class="card">
                                                         <div class="card-header">Add Admin</div>

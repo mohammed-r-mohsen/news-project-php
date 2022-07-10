@@ -129,7 +129,7 @@ private function __construct()
          public   function ValidateCategory(category $category) 
          {
             if($category->getname()<5)
-            return 'too short category name' ;
+               return 'too short category name' ;
          }
          
          public   function ValidateNews(news $News) 

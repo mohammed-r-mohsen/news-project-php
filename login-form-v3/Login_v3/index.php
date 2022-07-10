@@ -29,6 +29,17 @@
 </head>
 <body>
 	
+        <?php
+        if (empty($_SESSION['LoginStatues'])) 
+		{
+            ?>
+	<div class ="alert alert-danger">
+			<?php
+        echo $_SESSION['LoginStatues'];
+        }else
+		?>
+
+	</div>
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
 			<div class="wrap-login100">
